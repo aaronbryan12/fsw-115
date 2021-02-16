@@ -1,12 +1,11 @@
 
-const xhr= newXMLHttpsRequest()
+console.log(axios)
+axios.get("https://api.vschool.io/[aaronbrennan]/todo")
+.then(res => buildList(res.data))
+.catch(err => console.log(err))
 
-xhr.onreadystatechange= function(){
-    if (xhr.readyState === 4 && xhr.status === 200)
+
+function buildList(data){
+    console.log(data)
 }
-
-xhr.open(GET, "https://api.vschool.io/[aaronbrennan]/todo", true)
-xhr.send()
-
-console.log(function);
 
