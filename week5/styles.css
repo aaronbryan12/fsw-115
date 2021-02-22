@@ -1,9 +1,14 @@
+
+
 .title {
     text-decoration: line-through;
 }
 
 .body {
     background-color: burlywood;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 100%;
 }
 
 .listimages{

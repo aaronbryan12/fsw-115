@@ -3,8 +3,6 @@ axios.get("https://api.vschool.io/[aaronbrennan]/todo")
 .then(res => buildList(res.data))
 .catch(err => console.log(err))
 
-axios.post("https://api.vschool.io/[aaronbrennan]/todo")
-
 const todoForm = document.todoform
 
 todoForm.addEventListener("submit", function(event){
@@ -18,18 +16,21 @@ todoForm.addEventListener("submit", function(event){
     
     axios.post("https://api.vschool.io/[aaronbrennan]/todo", newTodo)
         .then(response => console.log(response.data))
-        .catch(error => console.log(error))
-    
-}) 
-
+        .catch(error => console.log(error))    
+})
 function buildList(data){
     for (let i = 0; i < data.length; i++){
+       
         console.log(data[i])
         const titleElement = document.createElement('h1')
         titleElement.textContent = data[i].title;
         document.body.appendChild(titleElement)
-        // titleElement.classList.add("title")
 
+                if (data[i].completed){
+                    console.log(data[i].completed)
+                    let lineThrough = document.querySelectorAll('h1')
+                    lineThrough[i].classList.add("title") 
+                }
 
         const descriptionElement = document.createElement('h2')
         descriptionElement.textContent = data[i].description
@@ -39,8 +40,7 @@ function buildList(data){
         priceElement.textContent = data[i].price
         document.body.appendChild(priceElement)
 
-        
-        if (data[i].imgUrl){
+            if (data[i].imgUrl){
             console.log(data[i].imgUrl)
             const srcElement = document.createElement('img')
             srcElement.src = data[i].imgUrl
@@ -53,16 +53,30 @@ function buildList(data){
 
         let completedButton = document.createElement('button')
         completedButton.innerText = 'Completed';'Incompleted'
+        completedButton.id = data[i]._id
         completedButton.addEventListener ('click', submitComment)
         document.body.appendChild(completedButton)
         
+        const deleteButton = document.createElement('button')
+        deleteButton.innerText = ' X ';
+        deleteButton.id = data[i]._id
+        document.body.appendChild(deleteButton)
+        deleteButton.addEventListener("click", function(e){
+        axios.delete("https://api.vschool.io/[aaronbrennan]/todo/"+e.target.id)
+        .then(response => console.log(response.data))
+        .catch(error => console.log(error))})
+     
         }
-        let lineThrough = document.querySelectorAll('h1')
-        lineThrough[1].classList.add("title")
+           
 }
 
-
-function submitComment() {
+function submitComment(event) {
+    let update = {
+        completed:true
+    }
+    axios.put("https://api.vschool.io/[aaronbrennan]/todo/"+event.target.id, update)
+    .then(response => console.log(response.data))
+    .catch(error => console.log(error))
     console.log ('completed')
 } 
 console.log(axios)
