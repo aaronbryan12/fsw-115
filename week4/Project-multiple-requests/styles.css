@@ -1,0 +1,23 @@
+#starships {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+#species {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+ul {
+    text-align: left;
+}
+
+.body2 {
+    background-color: cornflowerblue;
+}
+
+.body {
+    background-color: orangered;
+}
