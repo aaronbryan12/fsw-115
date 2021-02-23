@@ -1,0 +1,59 @@
+{
+    "menu": {
+        "appetizers": [{"rock shrimp" :{
+            "ingredients": ["panko", "coconut", "shrimp"],
+            "description": "Savory and Crunchy. Served with celery and cocktail sauce" 
+    }
+    },
+        {"sausage dip w/ chips": {
+           "ingredients": ["sausage or beef"],
+           "description": "hot and spicy dip for a bean chip or quinoa tortilla chip" 
+        }
+    }
+],
+    "cold sandwiches": [{"Cobb Salad Club" :{
+        "ingredients": ["italian bread", "spinach", "tomato", "vinagerette", "ham"],
+        "description": "Tangy, cold, delish" 
+    }
+    },
+        {"tuna club" :{
+            "ingredients": ["provolone cheese", "tuna in olive oil"],
+            "description": "tuna sandwiches should only be served with olive oil, stay Greek"
+        }
+    }
+],
+    "hot sandwichs": [{"chicken strip sandwich" :{
+        "ingredients": ["breaded chicken strip", "chipotle sauce", "onions", "peppers", "spinach"],
+        "description": "breaded, crunchy, spicy, cool and hot. Oh! Filling."
+    }
+    },
+        {"mojito pulled pork" :{
+            "ingredients": ["pulled pork", "onions", "cilantro", "chiles", "garlic", "orange juice"],
+            "description": "Citrus flavor for summer sandwich specials"
+        }
+    }
+],
+    "desserts": [{"Vegan Gluten Free Brennan Bread" :{
+        "ingredients": ["bananas", "gluten free flour", "vegan chocolate morsels", "cinnamon"],
+        "description": "Warm. Moist. Banana. Bread. Need I say more?"
+    }
+    },
+        {"Dutch Chocolate Ice Cream" :{
+            "ingredients": ["Milk", "Dutch Chocolate", "Vanilla Extract"],
+            "description": "Smooth and creamy dainty dutch chocolate ice cream for those warm movie nights."
+        }
+    }
+],
+    "drinks": [{"Bullet Proof Coffee" :{
+        "ingredients": ["bullet proof coffee beans", "Half and Half", "Sugar"],
+        "description": "Coffee. Yes you need it."
+    }
+    },
+        {"Fountain Drinks" :{
+            "ingredients": ["Soda"],
+            "description": "We got all of em' you're welcome"
+        }
+    }
+]
+    }
+    }
